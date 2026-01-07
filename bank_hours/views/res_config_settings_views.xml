@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.bank.hours</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="hr_attendance.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='hr_attendance']" position="inside">
+                <block title="Bank of Hours (Argentina)" name="bank_hours_settings">
+                    <div class="alert alert-info mt16 mb16" role="alert">
+                        <strong>Free Version</strong> - This is the free version of Bank Hours (Argentina). 
+                        A <strong>Premium version</strong> with advanced features (advanced reporting, notifications, approval workflows, payroll integration, and more) will be available soon. 
+                        Visit <a href="https://www.sebastianartaza.com" target="_blank" class="alert-link">www.sebastianartaza.com</a> for more information.
+                    </div>
+                    <setting string="Overtime Multiplier" help="Multiplier for overtime (e.g. 1.0 = equal time, 1.5 = 50% more time off)">
+                        <field name="overtime_multiplier"/>
+                    </setting>
+                    <setting string="Hours Expiry" help="Months before accumulated hours expire">
+                        <field name="bank_hours_expiry_months"/>
+                    </setting>
+                    <setting string="Minimum Rest Hours" help="Minimum hours of rest between shifts">
+                        <field name="min_rest_hours"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

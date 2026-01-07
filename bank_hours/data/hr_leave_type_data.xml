@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="holiday_status_bank_hours" model="hr.leave.type">
+            <field name="name">Bank of Hours</field>
+            <field name="request_unit">hour</field>
+            <field name="color">4</field>
+            <field name="requires_allocation">yes</field>
+        </record>
+    </data>
+</odoo>

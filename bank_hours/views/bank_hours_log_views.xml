@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_bank_hours_log_tree" model="ir.ui.view">
+        <field name="name">bank.hours.log.tree</field>
+        <field name="model">bank.hours.log</field>
+        <field name="arch" type="xml">
+            <tree string="Bank Hours History" decoration-info="bank_hours > 0">
+                <field name="date"/>
+                <field name="employee_id"/>
+                <field name="worked_hours" sum="Total Worked"/>
+                <field name="expected_hours" sum="Total Expected"/>
+                <field name="delta_hours" sum="Total Delta"/>
+                <field name="multiplier"/>
+                <field name="bank_hours" widget="float_time" sum="Total Bank Hours"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_bank_hours_log_form" model="ir.ui.view">
+        <field name="name">bank.hours.log.form</field>
+        <field name="model">bank.hours.log</field>
+        <field name="arch" type="xml">
+            <form string="Bank Hours Record">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="employee_id"/>
+                            <field name="date"/>
+                            <field name="attendance_id"/>
+                        </group>
+                        <group>
+                            <field name="worked_hours"/>
+                            <field name="expected_hours"/>
+                            <field name="delta_hours"/>
+                            <field name="multiplier"/>
+                            <field name="bank_hours" widget="float_time"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_bank_hours_log_search" model="ir.ui.view">
+        <field name="name">bank.hours.log.search</field>
+        <field name="model">bank.hours.log</field>
+        <field name="arch" type="xml">
+            <search string="Search History">
+                <field name="employee_id"/>
+                <field name="date"/>
+                <filter string="Today" name="today" domain="[('date', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Employee" name="group_by_employee" context="{'group_by': 'employee_id'}"/>
+                    <filter string="Month" name="group_by_month" context="{'group_by': 'date:month'}"/>
+                    <filter string="Date" name="group_by_date" context="{'group_by': 'date'}"/>
+                    <filter string="Year" name="group_by_year" context="{'group_by': 'date:year'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Graph View -->
+    <record id="view_bank_hours_log_graph" model="ir.ui.view">
+        <field name="name">bank.hours.log.graph</field>
+        <field name="model">bank.hours.log</field>
+        <field name="arch" type="xml">
+            <graph string="Bank Hours Analysis" type="line" sample="1" stacked="False">
+                <field name="date" interval="month" type="row"/>
+                <field name="employee_id" type="row"/>
+                <field name="worked_hours" type="measure" string="Worked Hours"/>
+                <field name="expected_hours" type="measure" string="Expected Hours"/>
+                <field name="bank_hours" type="measure" string="Bank Hours"/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- Pivot View -->
+    <record id="view_bank_hours_log_pivot" model="ir.ui.view">
+        <field name="name">bank.hours.log.pivot</field>
+        <field name="model">bank.hours.log</field>
+        <field name="arch" type="xml">
+            <pivot string="Bank Hours Analysis" sample="1">
+                <field name="employee_id" type="row"/>
+                <field name="date" interval="month" type="col"/>
+                <field name="worked_hours" type="measure" string="Worked Hours"/>
+                <field name="expected_hours" type="measure" string="Expected Hours"/>
+                <field name="delta_hours" type="measure" string="Overtime (Raw)"/>
+                <field name="bank_hours" type="measure" string="Bank Hours"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="action_bank_hours_log" model="ir.actions.act_window">
+        <field name="name">Bank of Hours History</field>
+        <field name="res_model">bank.hours.log</field>
+        <field name="view_mode">tree,form,graph,pivot</field>
+        <field name="search_view_id" ref="view_bank_hours_log_search"/>
+        <field name="context">{'search_default_group_by_month': 1, 'group_by': 'date:month'}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No history records found.
+            </p>
+            <p>
+                Extra hours will be recorded here automatically when employees check out.
+            </p>
+        </field>
+    </record>
+
+    <!-- Menu items -->
+    <!-- Top-level menu item - appears in main apps menu -->
+    <menuitem id="menu_bank_hours_root" 
+              name="Bank Hours" 
+              web_icon="bank_hours,static/description/icon.png"
+              groups="hr_attendance.group_hr_attendance_officer"
+              sequence="210"/>
+
+    <!-- Submenu item under Bank Hours -->
+    <menuitem id="menu_bank_hours_log" 
+              name="Bank Hours Log" 
+              parent="menu_bank_hours_root" 
+              action="action_bank_hours_log" 
+              sequence="10"/>
+</odoo>
