@@ -1,127 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+
 <section class="oe_container">
     <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Bank Hours (Argentina) - Free Version</h2>
+        <h3 class="oe_slogan">Módulo de gestión de banco de horas para Odoo según las nuevas regulaciones laborales de Argentina.</h3>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Descripción</h2>
         <div class="oe_span12">
-            <h2 class="oe_slogan">Bank Hours (Argentina)</h2>
-            <h3 class="oe_slogan">Gestión de Banco de Horas según Regulaciones Laborales Argentinas</h3>
-            <p class="oe_mt32 text-center">
-                Este módulo implementa el sistema de banco de horas de acuerdo con las nuevas regulaciones laborales en Argentina. 
-                Permite gestionar automáticamente las horas extra trabajadas por los empleados y convertirlas en tiempo libre 
-                compensatorio según los multiplicadores configurados.
+            <p>
+                Este módulo implementa el sistema de banco de horas de acuerdo con las nuevas regulaciones
+                laborales en Argentina. Permite gestionar automáticamente las horas extra trabajadas por los
+                empleados y convertirlas en tiempo libre compensatorio según los multiplicadores configurados.
             </p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Características</h2>
+        <div class="oe_span12">
+            <ul>
+                <li><strong>Multiplicador de horas extra configurable</strong> (1.0x, 1.5x, 2.0x)</li>
+                <li><strong>Reglas de expiración</strong> para las horas acumuladas</li>
+                <li><strong>Asignación automática</strong> de tiempo libre desde las horas extra de asistencia</li>
+                <li><strong>Análisis gráfico y reportes</strong> del banco de horas</li>
+                <li><strong>Filtros</strong> por empleado y mes</li>
+                <li><strong>Validación de tiempo mínimo de descanso</strong> entre turnos</li>
+            </ul>
         </div>
     </div>
 </section>
 
 <section class="oe_container oe_dark">
     <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan">Características Principales</h2>
-        <div class="oe_span6">
-            <div class="oe_demo oe_picture oe_screenshot">
-                <h3 class="oe_slogan">Multiplicador Configurable</h3>
-                <p class="oe_mt32">
-                    Configura el multiplicador de horas extra según tus necesidades:
-                    <ul>
-                        <li><strong>1.0x</strong> - Tiempo igual (1 hora extra = 1 hora de banco)</li>
-                        <li><strong>1.5x</strong> - 50% más (1 hora extra = 1.5 horas de banco)</li>
-                        <li><strong>2.0x</strong> - Doble tiempo (1 hora extra = 2 horas de banco)</li>
-                    </ul>
-                </p>
-            </div>
-        </div>
-        <div class="oe_span6">
-            <div class="oe_demo oe_picture oe_screenshot">
-                <h3 class="oe_slogan">Reglas de Expiración</h3>
-                <p class="oe_mt32">
-                    Define cuántos meses antes de que las horas acumuladas expiren. 
-                    El sistema gestiona automáticamente la validez de las horas del banco.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="oe_container">
-    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Requisitos</h2>
         <div class="oe_span12">
-            <h2 class="oe_slogan">Funcionalidades</h2>
-        </div>
-        <div class="oe_span6">
-            <h3>
-                <i class="fa fa-check-square-o"></i> Asignación Automática
-            </h3>
-            <p>
-                Las horas extra se convierten automáticamente en asignaciones de tiempo libre cuando los empleados 
-                marcan su salida. No necesitas intervención manual.
-            </p>
-        </div>
-        <div class="oe_span6">
-            <h3>
-                <i class="fa fa-bar-chart"></i> Análisis y Reportes
-            </h3>
-            <p>
-                Visualiza el historial de banco de horas con vistas gráficas, tablas pivot y análisis detallados. 
-                Filtra por empleado, mes o año.
-            </p>
-        </div>
-    </div>
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6">
-            <h3>
-                <i class="fa fa-filter"></i> Filtros Avanzados
-            </h3>
-            <p>
-                Filtra y agrupa los registros por empleado, mes, año o cualquier criterio que necesites 
-                para un análisis detallado.
-            </p>
-        </div>
-        <div class="oe_span6">
-            <h3>
-                <i class="fa fa-shield"></i> Validación de Descanso
-            </h3>
-            <p>
-                El sistema valida automáticamente que se respete el tiempo mínimo de descanso entre turnos, 
-                cumpliendo con las regulaciones laborales.
-            </p>
-        </div>
-    </div>
-</section>
-
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span12">
-            <h2 class="oe_slogan">Cómo Funciona</h2>
-            <div class="oe_row">
-                <div class="oe_span4">
-                    <div class="text-center">
-                        <span class="fa fa-clock-o fa-2x"></span>
-                        <h4>1. Registro de Asistencia</h4>
-                        <p>Los empleados marcan su entrada y salida normalmente en el módulo de Asistencia.</p>
-                    </div>
-                </div>
-                <div class="oe_span4">
-                    <div class="text-center">
-                        <span class="fa fa-calculator fa-2x"></span>
-                        <h4>2. Cálculo Automático</h4>
-                        <p>El sistema calcula automáticamente las horas extra trabajadas y aplica el multiplicador configurado.</p>
-                    </div>
-                </div>
-                <div class="oe_span4">
-                    <div class="text-center">
-                        <span class="fa fa-gift fa-2x"></span>
-                        <h4>3. Asignación de Tiempo Libre</h4>
-                        <p>Se crea automáticamente una asignación de tiempo libre en el tipo "Bank of Hours".</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="oe_container">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span12">
-            <h2 class="oe_slogan">Requisitos</h2>
-            <ul class="oe_mt32">
+            <ul>
                 <li>Odoo 17.0</li>
                 <li>Módulo <code>hr_attendance</code> (Asistencia)</li>
                 <li>Módulo <code>hr_holidays</code> (Vacaciones)</li>
@@ -130,23 +54,53 @@
     </div>
 </section>
 
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Instalación</h2>
+        <div class="oe_span12">
+            <ol>
+                <li>
+                    Copia el módulo en tu directorio de complementos personalizados:
+                    <pre>cp -r bank_hours /ruta/a/tus/addons/</pre>
+                </li>
+                <li>
+                    Actualiza la lista de aplicaciones en Odoo:<br/>
+                    Ve a <strong>Aplicaciones</strong> → <strong>Actualizar lista de aplicaciones</strong>
+                </li>
+                <li>Busca "Bank Hours (Argentina)" e instálalo.</li>
+                <li>Activa el modo desarrollador si necesitas ver los menús técnicos.</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
 <section class="oe_container oe_dark">
     <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Configuración</h2>
         <div class="oe_span12">
-            <h2 class="oe_slogan">Versión Premium (Próximamente)</h2>
-            <p class="oe_mt32 text-center">
-                La versión Premium incluirá funcionalidades avanzadas como:
-            </p>
-            <ul class="oe_mt32">
-                <li>Reportes avanzados y exportación de datos</li>
-                <li>Notificaciones automáticas</li>
-                <li>Flujos de aprobación personalizables</li>
-                <li>Integración con nómina</li>
-                <li>Y mucho más...</li>
-            </ul>
-            <p class="oe_mt32 text-center">
-                Visita <a href="https://www.sebastianartaza.com/bank_hours.html" target="_blank">www.sebastianartaza.com</a> 
-                para más información sobre la versión Premium.
+            <h3>Configuración de la Compañía</h3>
+            <ol>
+                <li>Ve a <strong>Configuración</strong> → <strong>Asistencia</strong> → <strong>Bank of Hours (Argentina)</strong></li>
+                <li>
+                    Configura los siguientes parámetros:
+                    <ul>
+                        <li>
+                            <strong>Multiplicador de horas extra:</strong> Define cómo se calculan las horas del banco.
+                            <ul>
+                                <li><code>1.0</code> = Tiempo igual (1 hora extra = 1 hora de banco)</li>
+                                <li><code>1.5</code> = 50% más (1 hora extra = 1.5 horas de banco)</li>
+                                <li><code>2.0</code> = Doble tiempo (1 hora extra = 2 horas de banco)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Expiración de horas (meses):</strong> Número de meses antes de que las horas acumuladas expiren.</li>
+                        <li><strong>Horas mínimas de descanso:</strong> Tiempo mínimo requerido entre turnos.</li>
+                    </ul>
+                </li>
+            </ol>
+            <h3>Tipo de Ausencia</h3>
+            <p>
+                El módulo crea automáticamente un tipo de ausencia llamado "Bank of Hours"
+                que se utiliza para las asignaciones de tiempo libre.
             </p>
         </div>
     </div>
@@ -154,23 +108,171 @@
 
 <section class="oe_container">
     <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Uso</h2>
         <div class="oe_span12">
-            <h2 class="oe_slogan">Soporte</h2>
-            <div class="oe_span6">
-                <p class="oe_mt32">
-                    <strong>Autor:</strong> Sebastian Martin, Artaza Saade<br/>
-                    <strong>Licencia:</strong> LGPL-3<br/>
-                    <strong>Versión:</strong> 17.0.1.0 (Free Version)
-                </p>
-            </div>
-            <div class="oe_span6">
-                <p class="oe_mt32">
-                    <strong>Sitio Web:</strong> <a href="https://www.sebastianartaza.com/bank_hours.html" target="_blank">www.sebastianartaza.com</a><br/>
-                    <strong>País:</strong> Argentina<br/>
-                    <strong>Categoría:</strong> Human Resources
-                </p>
-            </div>
+            <h3>Registro Automático</h3>
+            <p>El módulo registra automáticamente las horas extra cuando un empleado marca su salida:</p>
+            <ol>
+                <li>El empleado marca su entrada y salida normalmente en <strong>Asistencia</strong>.</li>
+                <li>Si trabaja más horas de las esperadas según su calendario, se calculan las horas extra.</li>
+                <li>Se aplica el multiplicador configurado.</li>
+                <li>
+                    Se crea automáticamente:
+                    <ul>
+                        <li>Un registro en el <strong>Banco de Horas Log</strong></li>
+                        <li>Una asignación de tiempo libre en el tipo "Bank of Hours"</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>Visualización del Historial</h3>
+            <ol>
+                <li>Ve a <strong>Bank Hours</strong> → <strong>Bank Hours Log</strong></li>
+                <li>Aquí verás todos los registros de horas extra trabajadas.</li>
+                <li>
+                    Puedes filtrar por:
+                    <ul>
+                        <li>Empleado</li>
+                        <li>Fecha</li>
+                        <li>Mes / Año</li>
+                    </ul>
+                </li>
+                <li>
+                    Puedes agrupar por:
+                    <ul>
+                        <li>Empleado</li>
+                        <li>Mes</li>
+                        <li>Año</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>Vistas Disponibles</h3>
+            <ul>
+                <li><strong>Lista:</strong> Vista tabular con todos los registros.</li>
+                <li><strong>Formulario:</strong> Detalle de cada registro.</li>
+                <li><strong>Gráfico:</strong> Análisis visual de horas trabajadas vs esperadas y banco de horas.</li>
+                <li><strong>Pivote:</strong> Tabla dinámica para análisis detallado.</li>
+            </ul>
+
+            <h3>Uso de las Horas Acumuladas</h3>
+            <ol>
+                <li>Ve a <strong>Vacaciones</strong> → <strong>Solicitudes</strong></li>
+                <li>Selecciona el tipo "Bank of Hours".</li>
+                <li>El sistema mostrará las horas disponibles según las asignaciones creadas.</li>
+            </ol>
         </div>
     </div>
 </section>
 
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Ejemplos de Configuración</h2>
+        <div class="oe_span12">
+            <h3>Escenario 1: Multiplicador 1.5x (50% más)</h3>
+            <ul>
+                <li>Empleado trabaja 2 horas extra</li>
+                <li>Multiplicador: 1.5</li>
+                <li>Resultado: 2 × 1.5 = <strong>3 horas de banco</strong></li>
+            </ul>
+            <h3>Escenario 2: Multiplicador 2.0x (Doble tiempo)</h3>
+            <ul>
+                <li>Empleado trabaja 1 hora extra</li>
+                <li>Multiplicador: 2.0</li>
+                <li>Resultado: 1 × 2.0 = <strong>2 horas de banco</strong></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Validaciones</h2>
+        <div class="oe_span12">
+            <h3>Tiempo Mínimo de Descanso</h3>
+            <p>
+                El módulo valida que entre el fin de un turno y el inicio del siguiente haya al menos
+                el tiempo mínimo de descanso configurado. Si no se cumple, se mostrará un error al
+                intentar marcar la entrada.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Datos Demo</h2>
+        <div class="oe_span12">
+            <p>El módulo incluye datos de demostración que puedes usar para probar las funcionalidades. Para activarlos:</p>
+            <ol>
+                <li>Instala el módulo con datos demo habilitados.</li>
+                <li>O ve a <strong>Configuración</strong> → <strong>Técnico</strong> → <strong>Base de datos</strong> → <strong>Cargar datos demo</strong>.</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Notas Técnicas</h2>
+        <div class="oe_span12">
+            <ul>
+                <li>El módulo requiere que los empleados tengan un calendario de recursos asignado.</li>
+                <li>Las horas se calculan basándose en el calendario del empleado.</li>
+                <li>Las asignaciones de tiempo libre se crean automáticamente con estado "confirmado".</li>
+                <li>Los registros del log son históricos y no se pueden modificar directamente.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Versión Premium (Próximamente)</h2>
+        <div class="oe_span12">
+            <p>La versión Premium incluirá:</p>
+            <ul>
+                <li>Reportes avanzados</li>
+                <li>Notificaciones automáticas</li>
+                <li>Flujos de aprobación</li>
+                <li>Integración con nómina</li>
+                <li>Exportación de datos</li>
+                <li>Y más...</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Changelog</h2>
+        <div class="oe_span12">
+            <h3>Versión 17.0.1.0</h3>
+            <ul>
+                <li>Versión inicial</li>
+                <li>Gestión básica de banco de horas</li>
+                <li>Multiplicadores configurables</li>
+                <li>Reglas de expiración</li>
+                <li>Validación de tiempo de descanso</li>
+                <li>Vistas gráficas y de pivote</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Soporte</h2>
+        <div class="oe_span12">
+            <ul>
+                <li><strong>Versión:</strong> Free Version</li>
+                <li><strong>Autor:</strong> Sebastian Martin, Artaza Saade</li>
+                <li><strong>Sitio web:</strong> <a href="https://www.sebastianartaza.com/bank_hours.html">https://www.sebastianartaza.com/bank_hours.html</a></li>
+                <li><strong>Licencia:</strong> LGPL-3</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
